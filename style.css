@@ -1,0 +1,523 @@
+/* General Styles */
+body, html {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Fixed "Book Now" Button */
+/* Fixed "Book Now" Button */
+.btn-books {
+    position: fixed;
+    top: 45px;
+    right: 6%;
+    background: #00ff0d;
+    border: 2px solid rgb(27, 27, 27);
+    color: #ffffff;
+    padding: 10px 10px;
+    border-radius: 20px 20px 20px 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 100;
+    font-size: 20px;
+}
+
+.btn-books:hover {
+    background: #00ff0d;
+    color: #7e3302ec;
+}
+
+/* Header: Logo and Title */
+.header {
+    width: 88.3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 1px;
+    gap: 15px;
+    position: fixed;
+    transition: all 0.3s ease;
+    z-index: 100;
+    margin-top: -10%;
+}
+
+.logo {
+    max-height: 60px;
+    margin-top: 5px;
+}
+
+.hotel-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #9b3e08;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        height: 18vh;
+    }
+
+    .btn-books {
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 10px;
+        border-radius: 50%;
+        width: 60px;
+        height: 50px;
+        padding: 0;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #00ff0d;
+    }
+
+    .logo {
+        max-height: 80px;
+        margin-top: 10px;
+    }
+
+    .hotel-title {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid #000000;
+    margin-top: 11%;
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 5px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0px 5px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block; /* Required for animation to apply properly */
+}
+
+/* Add shake animation on hover */
+.navbar ul li a:hover {
+    color: #c74b03;
+    text-decoration: underline;
+    transform: scale(1.1);
+    animation: shake-alternate 0.4s ease-in-out;
+}
+
+/* Alternative Keyframes for Shaking */
+@keyframes shake-alternate {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    animation: fadeInText 0.3s ease-out;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+}
+
+.slider-img {
+    min-width: 100%;
+    transition: transform 2s ease-in-out;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+}
+
+button.prev {
+    left: 20px;
+}
+
+button.next {
+    right: 20px;
+}
+
+/* General Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap content for smaller screens */
+    align-items: flex-start;
+    justify-content: space-between; /* Adjust spacing for desktop */
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+    animation: slideInLeft 1.5s ease-out;
+}
+
+/* Text Section */
+.container {
+    display: flex;
+    flex-direction: row; /* Horizontal layout for larger screens */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px; /* Add spacing between text and image */
+}
+
+/* Text Section */
+.container .text {
+    flex: 1; /* Allow the text to take available space */
+    text-align: left;
+}
+
+.container .text h1 {
+    font-size: 2rem;
+    color: #2b1001e1;
+    margin-bottom: 15px;
+}
+
+.container .text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Image Section */
+.container img {
+    flex: 0 0 40%; /* Set the width of the image */
+    max-width: 100%;
+    height: 70vh;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect */
+.container:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically for small screens */
+        align-items: center;
+        text-align: center; /* Center-align text */
+    }
+
+    .container img {
+        width: 100%; /* Image takes full width */
+        margin-top: 20px; /* Add spacing above the image */
+    }
+}
+
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  /* Image Item */
+  .image-item {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Images Styling */
+  .image-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Hover Animation */
+  .image-item:hover img {
+    transform: translateY(-10px);
+  }
+  
+  .image-item:hover img:hover {
+    transform: translateY(10px);
+  }
+  
+  /* Text Styling */
+  .image-item h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+  }
+
+
+  /* Container styling for the "Rooms" section */
+  .container-rooms {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Space between text and image */
+    padding: 1%; /* Minimal padding */
+    margin-top: 1%;
+    margin-bottom: 2%;
+
+}
+
+/* Text styling */
+.rooms-text {
+    flex: 7; /* Text takes up 70% of the container */
+    min-width: 300px;
+    padding-left: 20px; /* Adds space between the text and image */
+    
+}
+.room-texts{
+
+    border: 2px solid #522202 ;
+}
+
+.rooms-text h2 {
+    font-size: 28px;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+
+.rooms-text h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.rooms-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Image styling */
+.rooms-image {
+    flex: 3; /* Image takes up 30% of the container */
+    text-align: left; /* Aligns the image to the left */
+}
+
+.rooms-image img {
+    width: 100%; /* Image fully occupies its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Prevents excessive height */
+    border-radius: 10px; /* Optional: rounded corners */
+    object-fit: cover; /* Ensures the image fits nicely */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container-rooms {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .rooms-text, .rooms-image {
+        flex: unset; /* Remove flex proportions */
+        width: 100%; /* Full width for each item */
+        text-align: center; /* Center-align text */
+    }
+
+    .rooms-text h2 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .rooms-text h3, .rooms-text p {
+        font-size: 16px;
+    }
+
+    .rooms-image img {
+        max-width: 90%; /* Slightly smaller image */
+    }
+}
+
+
+/* Footer */
+/* Footer General Styling */
+.footer-links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #925625;
+    color: #000000;
+    padding: 1% 2%;
+    text-align: left;
+    border-top: 2px solid #000000;
+}
+
+.footer-links-wrapper div {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-links-wrapper h4 {
+    color: #000000;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.footer-links-wrapper li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+.footer-links-wrapper li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links-wrapper li a:hover {
+    color: #525252;
+}
+
+.logo2 img {
+    max-width: 65%;
+    border-radius: 20%;
+}
+
+/* Social Media Links */
+.links-wrapper-6 ul {
+    padding: 0;
+}
+
+.links-wrapper-6 li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.links-wrapper-6 i {
+    color: #000000;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.links-wrapper-6 a {
+    color: #000000;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.links-wrapper-6 a:hover {
+    color: #424242;
+}
+
+/* Footer Bottom Section */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #000000;
+}
+.links-wrapper-5 {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #000000;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links-wrapper div {
+        margin: 20px 0;
+    }
+
+    .logo2 img {
+        margin: 0 auto;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    position: relative;
+}
+footerp{
+    color: #ffffff;
+}

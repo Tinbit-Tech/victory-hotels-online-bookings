@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .image {
+  width: 90%; /* Keep the width responsive or set a specific value */
+  height: 100px; /* Reduce the height to a fixed value */
+  display: block;
+  position: relative;
+  object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    gap: 20px;
+  }
+
+  .room-list-container {
+    flex: 3;
+  }
+
+  .summary {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    padding: 20px;
+    background: #97561a;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .summary h2 {
+    margin: 0 0 10px;
+  }
+
+  .summary p {
+    margin: 5px 0;
+    color: #0e0e0e;
+  }
+
+  .summary button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #424344;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .summary button:hover {
+    background-color: #4d2002;
+  }
+
+  .top-bar {
+background: rgba(133, 133, 133, 0.9); /* Semi-transparent background */
+padding: 10px; /* Adjust padding */
+border: 1px solid #111111;
+border-radius: 8px;
+display: flex;
+flex-wrap: wrap; /* Allow wrapping for smaller screens */
+justify-content: space-between;
+align-items: flex-start; /* Align items to the start */
+margin-bottom: 20px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.377);
+width: 70%;
+margin-top: 30%;
+position: absolute; /* Position it above the image */
+top: 10%; /* Adjust the top position */
+left: 15%; /* Center horizontally */
+z-index: 10; /* Ensure it appears above the image */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+.top-bar {
+  width: 50%; /* Adjust the width for smaller screens */
+  left: 5%; /* Center horizontally with smaller margins */
+  margin-top: 0%; /* Adjust top margin for smaller screens */
+  flex-direction: column; /* Stack items vertically */
+  padding: 10px; /* Reduce padding */
+}
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+.top-bar {
+  width: 95%; /* Take almost full width */
+  left: 2.5%; /* Center with smaller margins */
+  padding: 10px; /* Smaller padding */
+}
+
+.top-bar input,
+.top-bar label {
+  width: 90%; /* Make inputs and labels take full width */
+  margin-bottom: 0px; /* Remove unnecessary spacing between elements */
+}
+}
+
+
+  .top-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .room-item {
+    display: flex;
+    align-items: center;
+    background: rgb(218, 218, 218);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #6e6e6e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .room-item img {
+    width: 30%;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+
+  .room-item .details {
+    width: 70%;
+  }
+
+  .room-item h3 {
+    margin: 0 0 10px;
+  }
+
+  .room-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+
+  .room-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .room-item button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
